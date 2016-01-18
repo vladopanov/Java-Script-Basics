@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>circle-area</title>
+</head>
+<body>
+    <p>r = <span id="firstR">7</span>; area = <span id="firstArea"></span></p>
+    <p>r = <span id="secondR">1.5</span>; area = <span id="secondArea"></span></p>
+    <p>r = <span id="thirdR">20</span>; area = <span id="thirdArea"></span></p>
+
+    <script src="circle-area.js"></script>
+
+    <script>
+        var r1 = 7;
+        var r2 = 1.5;
+        var r3 = 20;
+
+        document.write("r = " + r1 + "; area = " + calcCircleArea(r1) + "<br/>");
+        document.write("r = " + r2 + "; area = " + calcCircleArea(r2) + "<br/>");
+        document.write("r = " + r3 + "; area = " + calcCircleArea(r3) + "<br/>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quadratic Equation</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" placeholder="Enter a"/>
+        <input type="text" placeholder="Enter b"/>
+        <input type="text" placeholder="Enter c"/>
+    </form>
+    <p>Click to see the result:</p>
+    <button onclick="quadraticEquation()">Click</button>
+    <p id="result"></p>
+
+    <script>
+        function quadraticEquation() {
+            var a = parseInt(document.getElementById('form').elements[0].value);
+            var b = parseInt(document.getElementById('form').elements[1].value);
+            var c = parseInt(document.getElementById('form').elements[2].value);
+
+            var result;
+            var x1;
+            var x2;
+            x1 = (-b - (Math.sqrt((b * b) - (4 * a * c)))) / (2 * a);
+            x2 = (-b + (Math.sqrt((b * b) - (4 * a * c)))) / (2 * a);
+            if ((isNaN(x1)) || (isNaN(x2))) {
+                result = 'No real roots';
+            } else {
+                x1 !== x2 ? result = 'X1 = ' + x1 + "\n" + 'X2 = ' + x2 : result = 'X = ' + x1;
+            }
+
+            document.getElementById('result').innerHTML = result;
+
+        }</script>
+</body>
+</html>

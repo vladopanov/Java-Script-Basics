@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clock</title>
+</head>
+<body>
+    <h1>The current time is:</h1>
+    <div id="clock"></div>
+    <script>
+        function clockFunc() {
+            var time = new Date();
+            var hours = time.getHours();
+            if (hours < 10) {
+                hours = "0" + hours;
+            }
+            var minutes = time.getMinutes();
+            if (minutes < 10) {
+                minutes = "0" + hours;
+            }
+            var seconds = time.getSeconds();
+            if (seconds < 10) {
+                seconds = "0" + hours;
+            }
+            document.getElementById("clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+        }
+        setInterval("clockFunc()", 100);
+    </script>
+</body>
+</html>
